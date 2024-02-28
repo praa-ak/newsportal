@@ -15,12 +15,13 @@
         <li class="menu-header">Category</li>
         <li class="dropdown">
 
-          <a href="#" class="menu-toggle nav-link has-dropdown"><i
+          <a href="" class="menu-toggle nav-link has-dropdown"><i
               data-feather="edit"></i><span>Sports</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="widget-chart.html">Create News</a></li>
-            <li><a class="nav-link" href="widget-data.html">Edit News</a></li>
-            <li><a class="nav-link" href="widget-data.html">Delete News</a></li>
+            <li><a class="nav-link" href="{{route('newscreate')}}">Create News</a></li>
+          </ul>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href="{{route('newstable')}}">Newstable</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -29,8 +30,6 @@
                 data-feather="edit"></i><span>Crime</span></a>
             <ul class="dropdown-menu">
               <li><a class="nav-link" href="widget-chart.html">Create News</a></li>
-              <li><a class="nav-link" href="widget-data.html">Edit News</a></li>
-              <li><a class="nav-link" href="widget-data.html">Delete News</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -39,8 +38,7 @@
                 data-feather="edit"></i><span>Politics</span></a>
             <ul class="dropdown-menu">
               <li><a class="nav-link" href="widget-chart.html">Create News</a></li>
-              <li><a class="nav-link" href="widget-data.html">Edit News</a></li>
-              <li><a class="nav-link" href="widget-data.html">Delete News</a></li>
+
             </ul>
           </li>
           <li class="dropdown">
@@ -49,8 +47,7 @@
                 data-feather="edit"></i><span>Society</span></a>
             <ul class="dropdown-menu">
               <li><a class="nav-link" href="widget-chart.html">Create News</a></li>
-              <li><a class="nav-link" href="widget-data.html">Edit News</a></li>
-              <li><a class="nav-link" href="widget-data.html">Delete News</a></li>
+
             </ul>
           </li>
           <li class="menu-header">Advertisement</li>
@@ -60,7 +57,7 @@
               data-feather="credit-card"></i><span>Homepage Ad</span></a>
           <ul class="dropdown-menu">
             <li><a class="nav-link" href="widget-chart.html">Create Ads</a></li>
-            <li><a class="nav-link" href="widget-data.html">Delete Ads</a></li>
+
           </ul>
         </li>
         <li class="dropdown">
@@ -69,7 +66,7 @@
                 data-feather="credit-card"></i><span>Otherpage Ad</span></a>
             <ul class="dropdown-menu">
               <li><a class="nav-link" href="widget-chart.html">Create Ads</a></li>
-              <li><a class="nav-link" href="widget-data.html">Delete Ads</a></li>
+
             </ul>
           </li>
 

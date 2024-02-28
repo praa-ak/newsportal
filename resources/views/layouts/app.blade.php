@@ -46,6 +46,12 @@
   <title>Khabar Dharan - Admin</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="/assets/css/app.min.css">
+  <link rel="stylesheet" href="/assets/bundles/datatables/datatables.min.css">
+  <link rel="stylesheet" href="/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="/assets/bundles/summernote/summernote-bs4.css">
+  <link rel="stylesheet" href="/assets/bundles/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="/assets/bundles/codemirror/theme/duotone-dark.css">
+  <link rel="stylesheet" href="/assets/bundles/jquery-selectric/selectric.css">
   <!-- Template CSS -->
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/components.css">
@@ -84,7 +90,7 @@
           <li class="dropdown"><a href="#" data-toggle="dropdown"
               class="nav-link dropdown-toggle nav-link-lg nav-link-user text-dark">
 
-              <i data-feather="user-check" class=""></i>
+              <i class="fa fa-user"></i>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">{{Auth::user()->name}}</div>
               <a href="profile.html" class="dropdown-item has-icon"> <i class="far
@@ -215,16 +221,27 @@
   </div>
   <!-- General JS Scripts -->
   <script src="/assets/js/app.min.js"></script>
-  <!-- JS Libraies -->
-  <script src="/assets/bundles/apexcharts/apexcharts.min.js"></script>
-  <!-- Page Specific JS File -->
-  <script src="/assets/js/page/index.js"></script>
-  <!-- Template JS File -->
-  <script src="/assets/js/scripts.js"></script>
   <!-- Custom JS File -->
   <script src="/assets/js/custom.js"></script>
+  <script src="/assets/bundles/datatables/datatables.min.js"></script>
+  <script src="/assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <script src="/assets/bundles/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Page Specific JS File -->
+  <script src="/assets/js/page/datatables.js"></script>
+   <!-- Template JS File -->
+   <script src="/assets/js/scripts.js"></script>
+   <!-- Custom JS File -->
+   <script src="/assets/js/custom.js"></script>
+   <script src="https://unpkg.com/feather-icons"></script>
 </body>
-
+<!-- JS Libraies -->
+<script src="/assets/bundles/summernote/summernote-bs4.js"></script>
+<script src="/assets/bundles/codemirror/lib/codemirror.js"></script>
+<script src="/assets/bundles/codemirror/mode/javascript/javascript.js"></script>
+<script src="/assets/bundles/jquery-selectric/jquery.selectric.min.js"></script>
+<script src="/assets/bundles/ckeditor/ckeditor.js"></script>
+<!-- Page Specific JS File -->
+<script src="/assets/js/page/ckeditor.js"></script>
 
 <!-- index.html  21 Nov 2019 03:47:04 GMT -->
 </html>

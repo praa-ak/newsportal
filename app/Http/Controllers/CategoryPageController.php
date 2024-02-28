@@ -7,14 +7,7 @@ use Illuminate\Support\Facades\View;
 
 class CategoryPageController extends BaseController
 {
-
-
     public function category(){
         return view('category');
     }
-    public function company(){
-        return view('companytable');
-    }
-
-
 }
