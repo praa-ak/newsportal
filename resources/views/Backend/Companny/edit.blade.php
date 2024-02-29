@@ -5,10 +5,10 @@
                 <div class="card">
                     <div class="card-header justify-content-between">
                         <h3> Edit Form</h3>
-                        <a href="{{ route('companytable') }}" class="btn btn-primary"><i
+                        <a href="{{ route('company.index') }}" class="btn btn-primary"><i
                                 class="fa fa-chevron-left"></i><span>Go Back</span></a>
                     </div>
-                    <form action="{{ route('updatecompany', $id = $company->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('company.update', $id = $company->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('put')
                         <div class="card-body ">

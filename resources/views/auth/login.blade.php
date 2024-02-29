@@ -88,6 +88,9 @@
                   Login
                 </button>
               </div>
+              <div class="mb-4 text-muted text-center">
+                Don't have account ? <a href="{{route('register')}}">Register</a>
+            </div>
             </form>
 
 </x-guest-layout>

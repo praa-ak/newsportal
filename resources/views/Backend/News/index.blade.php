@@ -6,7 +6,7 @@
               <div class="card">
                 <div class="card-header justify-content-between">
                   <h4>Company Data</h4>
-                  <a href="{{route('newscreate')}}" class="btn btn-primary">Create News<i class="fa fa-plus"></i></a>
+                  <a href="{{route('news.create')}}" class="btn btn-primary">Create News<i class="fa fa-plus"></i></a>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -23,10 +23,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach ($news as $value )
+                        @foreach ($news as $value)
+
+
                         <tr>
                             <td>
-                                {{$value->id}}
+                              {{$value->index}}
+
                             </td>
 
 
@@ -34,7 +37,7 @@
                                 {{$value->title}}
                             </td>
                             <td>
-                            <img src="{{$value->image}}" alt="">
+                            <img src="{{asset('images/'.$value->image)}}" alt="" style="width: 120px">
                             </td>
                             <td>
                                 <p>{!! $value->description !!}</p>
@@ -43,9 +46,12 @@
 
 
                           <td>
-                            <a href="" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger">Delete</a>
-
+                            <a href="{{route('news.edit',$id=$value->id)}}" class="btn btn-sm btn-primary">Edit</a>
+                            <form action="{{route('news.destroy', $id=$value->id)}}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </form>
                           </td>
 
 

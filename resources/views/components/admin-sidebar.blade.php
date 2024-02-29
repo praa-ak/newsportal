@@ -10,46 +10,23 @@
           <a href="{{route('dashboard')}}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
         </li>
         <li class="dropdown">
-            <a href="{{route('companytable')}}" class="nav-link"><i data-feather="award"></i><span>Company</span></a>
+            <a href="{{route('company.index')}}" class="nav-link"><i data-feather="award"></i><span>Company</span></a>
           </li>
-        <li class="menu-header">Category</li>
+          <li class="dropdown">
+            <a href="{{route('category.index')}}" class="nav-link"><i data-feather="award"></i><span>Category</span></a>
+          </li>
+        <li class="menu-header">News</li>
         <li class="dropdown">
 
           <a href="" class="menu-toggle nav-link has-dropdown"><i
-              data-feather="edit"></i><span>Sports</span></a>
+              data-feather="edit"></i><span>Post</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="{{route('newscreate')}}">Create News</a></li>
+            <li><a class="nav-link" href="{{route('news.create')}}">Create News</a></li>
           </ul>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="{{route('newstable')}}">Newstable</a></li>
+            <li><a class="nav-link" href="{{route('news.index')}}">Newstable</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-
-            <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                data-feather="edit"></i><span>Crime</span></a>
-            <ul class="dropdown-menu">
-              <li><a class="nav-link" href="widget-chart.html">Create News</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-
-            <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                data-feather="edit"></i><span>Politics</span></a>
-            <ul class="dropdown-menu">
-              <li><a class="nav-link" href="widget-chart.html">Create News</a></li>
-
-            </ul>
-          </li>
-          <li class="dropdown">
-
-            <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                data-feather="edit"></i><span>Society</span></a>
-            <ul class="dropdown-menu">
-              <li><a class="nav-link" href="widget-chart.html">Create News</a></li>
-
-            </ul>
-          </li>
           <li class="menu-header">Advertisement</li>
         <li class="dropdown">
 

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('eng_name');
             $table->string('slug');
             $table->string('nep_name');
+            $table->boolean('status')->default('1');
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@ class PostPageController extends BaseController
 {
     public function post()
     {
-
-        return view('post');
+        $post = Post::all();
+        return view('post',compact('post'));
     }
 }

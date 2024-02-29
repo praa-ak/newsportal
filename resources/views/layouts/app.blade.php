@@ -58,6 +58,7 @@
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="/assets/css/custom.css">
   <link rel='shortcut icon' type='image/x-icon' href='/assets/img/favicon.ico' />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -219,6 +220,10 @@
       </footer>
     </div>
   </div>
+  <script> $(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});</script>
+
   <!-- General JS Scripts -->
   <script src="/assets/js/app.min.js"></script>
   <!-- Custom JS File -->
@@ -233,15 +238,16 @@
    <!-- Custom JS File -->
    <script src="/assets/js/custom.js"></script>
    <script src="https://unpkg.com/feather-icons"></script>
-</body>
-<!-- JS Libraies -->
-<script src="/assets/bundles/summernote/summernote-bs4.js"></script>
-<script src="/assets/bundles/codemirror/lib/codemirror.js"></script>
-<script src="/assets/bundles/codemirror/mode/javascript/javascript.js"></script>
-<script src="/assets/bundles/jquery-selectric/jquery.selectric.min.js"></script>
-<script src="/assets/bundles/ckeditor/ckeditor.js"></script>
-<!-- Page Specific JS File -->
-<script src="/assets/js/page/ckeditor.js"></script>
+   <!-- JS Libraies -->
+   <script src="/assets/bundles/summernote/summernote-bs4.js"></script>
+   <script src="/assets/bundles/codemirror/lib/codemirror.js"></script>
+   <script src="/assets/bundles/codemirror/mode/javascript/javascript.js"></script>
+   <script src="/assets/bundles/jquery-selectric/jquery.selectric.min.js"></script>
+   <script src="/assets/bundles/ckeditor/ckeditor.js"></script>
+   <!-- Page Specific JS File -->
+   <script src="/assets/js/page/ckeditor.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+</body>
 <!-- index.html  21 Nov 2019 03:47:04 GMT -->
 </html>

@@ -6,7 +6,7 @@
                     <div class="card">
                         <div class="card-header justify-content-between">
                             <h4>Company Data</h4>
-                            <a href="{{ route('companycreate') }}" class="btn btn-primary">Create<i
+                            <a href="{{ route('company.create') }}" class="btn btn-primary">Create<i
                                     class="fa fa-plus"></i></a>
                         </div>
                         <div class="card-body">
@@ -49,9 +49,13 @@
                                                     {{ $company->email }}
                                                 </td>
                                                 <td>
-                                                    <a href="{{ route('editcompany', $id = $company->id) }}"
+                                                    <a href="{{ route('company.edit', $id = $company->id) }}"
                                                         class="btn btn-sm btn-primary">Edit</a>
-                                                    <a href="" class="btn btn-sm btn-danger">Delete</a>
+                                                        <form action="{{route('company.destroy', $id=$company->id)}}" method="post">
+                                                            @csrf
+                                                            @method('delete')
+                                                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                        </form>
 
                                                 </td>
 

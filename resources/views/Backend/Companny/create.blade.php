@@ -5,9 +5,9 @@
                 <div class="card">
                     <div class="card-header justify-content-between">
                         <h3> Creation Form</h3>
-                        <a href="{{route('companytable')}}" class="btn btn-primary"><i class="fa fa-chevron-left"></i><span>Go Back</span></a>
+                        <a href="{{route('company.index')}}" class="btn btn-primary"><i class="fa fa-chevron-left"></i><span>Go Back</span></a>
                     </div>
-                    <form action="{{route('savecompany')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('company.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                     <div class="card-body ">
                         <div class="row ">
