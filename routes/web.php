@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AdvertisementController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CompanyController;
 use App\Http\Controllers\Backend\SettingController;
@@ -50,6 +51,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/admin/company',SettingController::class)->names('company');
     Route::resource('/admin/news',NewsController::class)->names('news');
     Route::resource('/admin/category',CategoryController::class)->names('category');
+    Route::resource('/admin/advertisement', AdvertisementController::class)->names('advertise');
 
 });
 

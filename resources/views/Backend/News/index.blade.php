@@ -23,12 +23,12 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @foreach ($news as $value)
+                        @foreach ($news as $index=>$value)
 
 
                         <tr>
                             <td>
-                              {{$value->index}}
+                              {{++$index}}
 
                             </td>
 

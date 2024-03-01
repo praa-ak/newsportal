@@ -44,7 +44,7 @@ class NewsController extends Controller
             # code...
         }
         $news->save();
-        return redirect()->route(' news.index');
+        return redirect()->route('news.index');
     }
 
     /**

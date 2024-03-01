@@ -9,8 +9,12 @@ class Advertisement extends Model
 {
     protected $fillable = [
         'company_name',
-        'image',
-        'link'
+        'contact',
+        'email',
+        'address',
+        'payment',
+        'banner',
+        
     ];
     use HasFactory;
 }

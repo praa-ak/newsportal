@@ -31,9 +31,10 @@
         <li class="dropdown">
 
           <a href="#" class="menu-toggle nav-link has-dropdown"><i
-              data-feather="credit-card"></i><span>Homepage Ad</span></a>
+              data-feather="credit-card"></i><span>Advertisement</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="widget-chart.html">Create Ads</a></li>
+            <li><a class="nav-link" href="{{route('advertise.index')}}">View Ads</a></li>
+            <li><a class="nav-link" href="{{route('advertise.create')}}">Create Ads</a></li>
 
           </ul>
         </li>

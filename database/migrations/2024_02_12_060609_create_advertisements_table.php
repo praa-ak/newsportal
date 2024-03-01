@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('advertisements', function (Blueprint $table) {
             $table->id();
+            $table->string('company_name');
+            $table->string('contact');
+            $table->string('email');
+            $table->string('address');
+            $table->enum('status',['accept','decline','pending'])->default('pending');
+            $table->string('payment');
+            $table->string('banner');
             $table->timestamps();
         });
     }
