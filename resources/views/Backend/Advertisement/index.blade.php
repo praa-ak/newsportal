@@ -66,7 +66,7 @@
                                                 </td>
 
                                                 @endif
-                                                <td class="d-flex">
+                                                <td class="d-flex py-5">
                                                     <a href="{{ route('advertise.edit', $id = $value->id) }}"
                                                         class="btn btn-sm btn-primary mx-2">Edit</a>
                                                     <form action="{{ route('advertise.destroy', $id = $value->id) }}"
