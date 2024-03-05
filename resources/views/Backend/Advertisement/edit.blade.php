@@ -30,11 +30,11 @@
                             </div>
                             <div class="form-group col-6">
                                 <label>Payment Screenshot<span class="text-danger">*</span></label>
-                                <input type="file" name="payment" value="{{$ad->payment}}" class="form-control" required>
+                                <input type="file" name="payment" value="{{$ad->payment}}" class="form-control" >
                             </div>
                             <div class="form-group col-6">
                                 <label>Ad Banner<span class="text-danger">*</span></label>
-                                <input type="file" name="banner" value="{{$ad->banner}}" class="form-control" required>
+                                <input type="file" name="banner" value="{{$ad->banner}}" class="form-control">
                             </div>
                             <div class="form-group col-6">
                                 <label>Status</label>

@@ -16,9 +16,9 @@
                           <th class="text-center">
                             SN
                           </th>
+                          <th>Category</th>
                           <th>Title</th>
                           <th>Image</th>
-                          <th>Description</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -31,6 +31,9 @@
                               {{++$index}}
 
                             </td>
+                            {{-- <td>
+                                {{$value->categories->eng_name}}
+                            </td> --}}
 
 
                             <td>
@@ -38,10 +41,6 @@
                             </td>
                             <td>
                             <img src="{{asset('images/'.$value->image)}}" alt="" style="width: 120px">
-                            </td>
-                            <td>
-                                <p>{!! $value->description !!}</p>
-
                             </td>
 
 

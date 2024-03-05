@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdPageController;
 use App\Http\Controllers\Backend\AdvertisementController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CompanyController;
@@ -26,11 +27,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomePageController::class, 'home']);
 Route::get('/category', [CategoryPageController::class, 'category']);
-
 Route::get('/post', [PostPageController::class, 'post']);
+Route::get('/adcreate', [AdPageController::class, 'advertise']);
+Route::post('/adstore', [AdPageController::class, 'adstore'])->name('adstore');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     // Route::get('/admin/company', [CompanyController::class, 'company'])->name('companytable');

@@ -20,20 +20,21 @@
                                     <label>Image</label>
                                     <input type="file" name="image" class="form-control">
                                 </div>
-                                <div class="form-group col-6">
+                                <div class="form-group col-12">
                                     <label>Descritpion</label>
-                                    <textarea name="description" class="summernote-simple"></textarea>
+                                    <textarea name="description" class="summernote"></textarea>
                                 </div>
 
                             </div>
 
                             <div class="form-group col-6">
-                                <label>Category</label>
-                                <select class="form-control" name="status">
-                                  <option ></option>
-                                  <option ></option>
+                                <label>Select any Category</label>
+                                <select class="multiple-select form-control" name="categories" multiple="multiple">
+                                    @foreach ($categories as $value)
+                                    <option id="{{$value->id}}">{{$value->eng_name}}</option>
+                                    @endforeach
                                 </select>
-                              </div>
+                            </div>
 
 
                             <div>

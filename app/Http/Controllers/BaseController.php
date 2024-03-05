@@ -16,6 +16,11 @@ class BaseController extends Controller
             'name'=>'Post',
             'slug'=>'post'
         ],
+        [
+            'name'=>'Advertise',
+            'slug'=>'adcreate'
+        ],
+
 
     ];
     View::share([
