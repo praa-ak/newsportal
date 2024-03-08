@@ -31,9 +31,9 @@
                               {{++$index}}
 
                             </td>
-                            {{-- <td>
-                                {{$value->categories->eng_name}}
-                            </td> --}}
+                            <td>
+                                {{-- {{$value->categories->eng_name}} --}}
+                            </td>
 
 
                             <td>

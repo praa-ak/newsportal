@@ -11,7 +11,7 @@
           </li>
           @foreach ($menu as $value )
           <li class="nav-item">
-            <a class="nav-link" href="/{{$value['slug']}}">{{$value['name']}}</a>
+            <a class="nav-link" href="/{{$value['slug']}}">{{$value['eng_name']}}</a>
           </li>
 
           @endforeach
