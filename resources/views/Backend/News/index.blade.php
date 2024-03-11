@@ -32,7 +32,9 @@
 
                             </td>
                             <td>
-                                {{-- {{$value->categories->eng_name}} --}}
+                                @foreach ($news->categories as $value)
+                                <span>{{$value->eng_name}},</span>
+                                @endforeach
                             </td>
 
 
@@ -40,7 +42,7 @@
                                 {{$value->title}}
                             </td>
                             <td>
-                            <img src="{{asset('images/'.$value->image)}}" alt="" style="width: 120px">
+                            <img src="{{asset($value->image)}}" alt="" style="width: 120px">
                             </td>
 
 

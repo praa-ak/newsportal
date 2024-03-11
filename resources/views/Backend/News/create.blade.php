@@ -29,7 +29,7 @@
 
                             <div class="form-group col-6">
                                 <label>Select any Category</label>
-                                <select class="multiple-select form-control" name="categories" multiple="multiple">
+                                <select class="multiple-select form-control" name="categories[]" multiple="multiple">
                                     @foreach ($categories as $value)
                                     <option id="{{$value->id}}">{{$value->eng_name}}</option>
                                     @endforeach

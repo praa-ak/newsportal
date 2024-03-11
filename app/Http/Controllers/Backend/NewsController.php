@@ -14,7 +14,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = Post::orderBy('id','desc')->get();
+        $news = Post::orderBy('id', 'desc')->get();
         return view('Backend.News.index', compact('news'));
     }
 
@@ -24,7 +24,7 @@ class NewsController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('Backend.News.create',compact('categories'));
+        return view('Backend.News.create', compact('categories'));
     }
 
     /**
@@ -39,11 +39,13 @@ class NewsController extends Controller
             $file = $request->image;
             $newname = time() . $file->getClientOriginalName();
             $file->move('images', $newname);
-            $news->image = $newname;
+            $news->image ='images/' . $newname;
 
             # code...
         }
+
         $news->save();
+        $news->categories()->attach($request->categories);
         return redirect()->route('news.index');
     }
 
@@ -76,11 +78,10 @@ class NewsController extends Controller
             $file = $request->image;
             $newname = time() . $file->getClientOriginalName();
             $file->move('images', $newname);
-            $news->image = $newname;
-
-            # code...
+            $news->image = 'images/' . $newname;
         }
         $news->update();
+        $news->categories()->sync($request->categories);
         return redirect()->route('news.index');
     }
 
@@ -92,6 +93,5 @@ class NewsController extends Controller
         $news = Post::find($id);
         $news->delete();
         return redirect()->route('news.index');
-
     }
 }

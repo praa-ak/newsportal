@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('image')->nullable();
-            $table->string('description');
+            $table->longText('description');
             $table->timestamps();
         });
         Schema::create('category_post', function (Blueprint $table){
