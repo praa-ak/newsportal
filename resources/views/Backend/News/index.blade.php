@@ -32,8 +32,8 @@
 
                             </td>
                             <td>
-                                @foreach ($news->categories as $value)
-                                <span>{{$value->eng_name}},</span>
+                                @foreach ($value->categories as $v)
+                                <span>{{$v->eng_name}},</span>
                                 @endforeach
                             </td>
 

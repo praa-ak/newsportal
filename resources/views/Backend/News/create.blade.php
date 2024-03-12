@@ -31,7 +31,7 @@
                                 <label>Select any Category</label>
                                 <select class="multiple-select form-control" name="categories[]" multiple="multiple">
                                     @foreach ($categories as $value)
-                                    <option id="{{$value->id}}">{{$value->eng_name}}</option>
+                                    <option value="{{$value->id}}">{{$value->eng_name}}</option>
                                     @endforeach
                                 </select>
                             </div>
