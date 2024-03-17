@@ -27,22 +27,21 @@
                                 <label>Email<span class="text-danger">*</span></label>
                                 <input type="email" name="email" class="form-control" required>
                             </div>
-                            <div class="form-group col-6">
-                                <label>Payment Screenshot<span class="text-danger">*</span></label>
-                                <input type="file" name="payment" class="form-control" required>
+
+                            <div class="form-group col-4 image-preview mr-3" id="image-preview">
+                                <label  for="image-upload">Payment Screenshot<span class="text-danger">*</span></label>
+                                <input type="file" name="payment" class="form-control" id="image-upload"  required>
                             </div>
-                            <div class="form-group col-6">
-                                <label>Ad Banner<span class="text-danger">*</span></label>
-                                <input type="file" name="banner" class="form-control" required>
+
+                            <div class="form-group col-4 image-preview " id="image-preview">
+                                <label  for="image-upload">Payment Screenshot<span class="text-danger">*</span></label>
+                                <input type="file" name="banner" class="form-control" id="image-upload"  required>
                             </div>
-                            {{-- <div class="form-group col-6">
-                                <label>Status</label>
-                                <select class="form-control" name="status">
-                                  <option value="1">Active</option>
-                                  <option value="0">Not Active</option>
-                                </select>
-                              </div> --}}
+
+
+
                         </div>
+
                         <div>
                             <button type="submit" class="btn btn-success">Save Data</button>
                         </div>

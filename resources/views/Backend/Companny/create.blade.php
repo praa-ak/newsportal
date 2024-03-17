@@ -32,6 +32,7 @@
                                 <label>Logo</label>
                                 <input type="file" name="logo" class="form-control">
                             </div>
+                           
                         </div>
                         <div>
                             <button type="submit" class="btn btn-success">Save Data</button>

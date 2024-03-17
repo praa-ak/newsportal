@@ -23,7 +23,8 @@ class SettingController extends Controller
      */
     public function create()
     {
-        return view('Backend.Companny.create');
+        $company = Company::first();
+        return view('Backend.Companny.create', compact('company'));
     }
 
     /**
@@ -82,7 +83,7 @@ class SettingController extends Controller
 
         }
         $company->update();
-        return redirect()->back(); 
+        return redirect()->back();
     }
 
     /**

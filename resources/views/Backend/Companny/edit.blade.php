@@ -37,7 +37,13 @@
                                 <div class="form-group col-6">
                                     <label>Logo</label>
                                     <input type="file" name="logo" class="form-control">
+
+                                    <div class="card col-6 mt-2 p-3" style="align-items: center">
+                                    <img src="{{asset('images/'.$company->logo)}}" alt="" style="width: 120px">
                                 </div>
+
+                                </div>
+
                             </div>
                             <div>
                                 <button type="submit" class="btn btn-success">Save Data</button>
