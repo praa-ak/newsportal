@@ -30,6 +30,8 @@ Route::get('/category', [CategoryPageController::class, 'category']);
 Route::get('/post', [PostPageController::class, 'post']);
 Route::get('/adcreate', [AdPageController::class, 'advertise']);
 Route::post('/adstore', [AdPageController::class, 'adstore'])->name('adstore');
+Route::post('/subscriber', [BaseController::class, 'subscriber'])->name('substore');
+Route::get('/subindex', [BaseController::class, 'subindex'])->name('subindex');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

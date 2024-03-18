@@ -63,7 +63,6 @@
     <link rel="stylesheet" href="/assets/css/app.min.css">
     <link rel="stylesheet" href="/assets/bundles/summernote/summernote-bs4.css">
     <link rel="stylesheet" href="/assets/bundles/jquery-selectric/selectric.css">
-    <link rel="stylesheet" href="/assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
 
 </head>
 
@@ -251,7 +250,6 @@
     <!-- Template JS File -->
     <script src="/assets/js/scripts.js"></script>
     <!-- Custom JS File -->
-    <script src="/assets/js/custom.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- JS Libraies -->
     <script src="/assets/bundles/summernote/summernote-bs4.js"></script>
@@ -259,12 +257,9 @@
     <script src="/assets/bundles/codemirror/mode/javascript/javascript.js"></script>
     <script src="/assets/bundles/jquery-selectric/jquery.selectric.min.js"></script>
     <script src="/assets/bundles/ckeditor/ckeditor.js"></script>
-    <script src="/assets/bundles/upload-preview/assets/js/jquery.uploadPreview.min.js"></script>
-    <script src="/assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
     <!-- Page Specific JS File -->
     <script src="/assets/js/page/ckeditor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="/assets/js/page/create-post.js"></script>
     <script>
         $(document).ready(function() {
             $(".multiple-select").select2({

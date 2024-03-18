@@ -62,8 +62,8 @@ class NewsController extends Controller
      */
     public function edit(string $id)
     {
-        $post = Post::find($id);
-        return view('Backend.News.edit', compact('post'));
+        $news = Post::find($id);
+        return view('Backend.News.edit', compact('news'));
     }
 
     /**
