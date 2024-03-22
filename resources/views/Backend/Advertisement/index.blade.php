@@ -46,10 +46,10 @@
                                                     {{ $value->email }}
                                                 </td>
                                                 <td>
-                                                   <img src="{{asset('images/'.$value->payment)}}" alt="" style="width: 120px">
+                                                   <img src="{{asset($value->payment)}}" alt="" style="width: 120px">
                                                 </td>
                                                 <td>
-                                                    <img src="{{asset('images/'.$value->banner)}}" alt="" style="width: 120px">
+                                                    <img src="{{asset($value->banner)}}" alt="" style="width: 120px">
                                                 </td>
 
                                                 @if ($value->status == 'accept')

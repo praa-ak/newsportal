@@ -28,14 +28,14 @@
                                 <input type="email" name="email" class="form-control" required>
                             </div>
 
-                            <div class="form-group col-4  mr-3">
+                            <div class="form-group col-6 ">
                                 <label  for="">Payment Screenshot<span class="text-danger">*</span></label>
                                 <input type="file" name="payment" class="form-control" required>
                             </div>
 
-                            <div class="form-group col-4 image-preview " id="image-preview">
-                                <label  for="image-upload">Payment Screenshot<span class="text-danger">*</span></label>
-                                <input type="file" name="banner" class="form-control" id="image-upload"  required>
+                            <div class="form-group col-6 " >
+                                <label >Advertise Banner<span class="text-danger">*</span></label>
+                                <input type="file" name="banner" class="form-control"  required>
                             </div>
 
 

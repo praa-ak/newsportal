@@ -14,28 +14,33 @@
                         <div class="card-body ">
                             <div class="row ">
                                 <div class="form-group col-6">
+                                    <label>Select any Category</label>
+                                    <select class="multiple-select form-control" name="categories[]" multiple="multiple">
+                                        @foreach ($category as $value)
+                                        <option value="{{$value->id}}" @foreach ($news->categories as $item )
+                                            {{$item->id == $value->id ? 'selected':''}}
+                                        @endforeach>{{$value->eng_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group col-6">
                                     <label>Title <span class="text-danger">*</span></label>
                                     <input type="text" name="title" class="form-control" value="{{$news->title}}">
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <label>Descritpion</label>
+                                    <textarea name="description" class="summernote">{{$news->description}}</textarea>
                                 </div>
                                 <div class="form-group col-6">
                                     <label>Image</label>
                                     <input type="file" name="image" class="form-control">
                                 </div>
-                                <div class="form-group col-12">
-                                    <label>Descritpion</label>
-                                    <textarea name="description" value="{{$news->description}}" class="summernote"></textarea>
-                                </div>
+                                <img src="{{asset($news->image)}}" width="120" alt="">
 
                             </div>
 
-                            <div class="form-group col-6">
-                                <label>Select any Category</label>
-                                <select class="multiple-select form-control" name="categories[]" multiple="multiple">
-                                    @foreach ($categories as $value)
-                                    <option value="{{$value->id}}">{{$value->eng_name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
+
 
 
                             <div>

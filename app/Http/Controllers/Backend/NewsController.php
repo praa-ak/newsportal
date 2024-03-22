@@ -63,7 +63,8 @@ class NewsController extends Controller
     public function edit(string $id)
     {
         $news = Post::find($id);
-        return view('Backend.News.edit', compact('news'));
+        $category = Category::all();
+        return view('Backend.News.edit', compact('news','category'));
     }
 
     /**
@@ -74,12 +75,13 @@ class NewsController extends Controller
         $news = Post::find($id);
         $news->title = $request['title'];
         $news->description = $request['description'];
-        if ($request->hasFile('image')) {
-            $file = $request->image;
-            $newname = time() . $file->getClientOriginalName();
-            $file->move('images', $newname);
-            $news->image = 'images/' . $newname;
-        }
+        // if ($request->hasFile('image')) {
+        //     $file = $request->image;
+        //     $newname = time() . $file->getClientOriginalName();
+        //     $file->move('images', $newname);
+        //     $news->image = 'images/' . $newname;
+        // }
+        uploadimage($request, $news, 'logo', 'images');
         $news->update();
         $news->categories()->sync($request->categories);
         return redirect()->route('news.index');

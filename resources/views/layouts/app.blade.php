@@ -64,9 +64,12 @@
     <link rel="stylesheet" href="/assets/bundles/summernote/summernote-bs4.css">
     <link rel="stylesheet" href="/assets/bundles/jquery-selectric/selectric.css">
 
+    
+
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div class="loader"></div>
     <div id="app">
         <div class="main-wrapper main-wrapper-1">

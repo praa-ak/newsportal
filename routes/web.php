@@ -8,7 +8,7 @@ use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\NewsController;
 use App\Http\Controllers\BaseController;
 use App\Http\Controllers\CategoryPageController;
-use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\Frontend\HomepageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostPageController;
 use App\Http\Controllers\ProfileController;
@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomePageController::class, 'home']);
+Route::get('/', [HomepageController::class, 'home']);
 Route::get('/category', [CategoryPageController::class, 'category']);
 Route::get('/post', [PostPageController::class, 'post']);
 Route::get('/adcreate', [AdPageController::class, 'advertise']);

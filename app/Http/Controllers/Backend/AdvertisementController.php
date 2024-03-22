@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Advertisement;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdvertisementController extends Controller
 {
@@ -35,18 +36,19 @@ class AdvertisementController extends Controller
         $ad->address = $request->address;
         $ad->contact = $request->contact;
         $ad->email = $request->email;
+
         if ($request->hasFile('payment')) {
             $file = $request->payment;
-            $newname = time().$file->getClientOriginalName();
+            $newname = time() . $file->getClientOriginalName();
             $file->move('images', $newname);
-            $ad->payment = $newname;
-        }
-         if ($request->hasFile('banner')) {
+            $ad->payment = 'images/' . $newname;
+    }
+        if ($request->hasFile('banner')) {
             $file = $request->banner;
-            $newname = time().$file->getClientOriginalName();
+            $newname = time() . $file->getClientOriginalName();
             $file->move('images', $newname);
-            $ad->banner = $newname;
-        }
+            $ad->banner = 'images/' . $newname;
+    }
         $ad->save();
         return redirect()->route('advertise.index');
 
@@ -94,8 +96,9 @@ class AdvertisementController extends Controller
             $ad->banner = $newname;
         }
         $ad->status = $request->status;
-        $ad->save();
-        return redirect()->route('advertise.index');
+        $ad->update();
+        alertv('Ad updated', 'Success');
+        return redirect()->back();
 
     }
 
@@ -104,8 +107,13 @@ class AdvertisementController extends Controller
      */
     public function destroy(string $id)
     {
+
         $ad = Advertisement::find($id);
+
         $ad->delete();
+        $title = 'Delete User!';
+        $text = "Are you sure you want to delete?";
+        confirmDelete($title, $text);
         return redirect()->route('advertise.index');
     }
 }
