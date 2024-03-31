@@ -11,22 +11,9 @@ class BaseController extends Controller
 {
    public function __construct()
   {
-    $menu = [
-        ['name'=> 'Category',
-        'slug'=>'category'],
-        [
-            'name'=>'Post',
-            'slug'=>'post'
-        ],
-        [
-            'name'=>'Advertise',
-            'slug'=>'adcreate'
-        ],
-
-
-    ];
+   $category = Category::where('status',true)->get();
     View::share([
-        'menu'=>$menu,
+        'category'=>$category,
     ]);
    }
    public function subscriber(Request $request){
