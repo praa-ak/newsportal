@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
+    
 </head>
 <body>
     <div>
@@ -19,5 +20,6 @@
        </div>
 
        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+       <script src="https://unpkg.com/feather-icons"></script>
     </body>
 </html>
