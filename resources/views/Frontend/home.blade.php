@@ -8,8 +8,7 @@
             <marquee behavior="" direction="" onmouseover="this.stop()" onmouseout="this.start()">
                 <div class="flex gap-8">
                     @foreach ($news as $item)
-
-                        <a href="" class="py-2">{{ $item->title }}</a>
+                        <a href="" class="py-2"><i class="fa fa-bell px-1"></i>{{ $item->title }}</a>
                     @endforeach
                 </div>
             </marquee>
@@ -45,81 +44,83 @@
             <div class="grid grid-cols-12 gap-5">
 
                 @foreach ($category as $index => $item)
-                    @if (count($item->posts)>0)
-                    @if ($index == 0)
-                        <div class="col-span-8">
+                    @if (count($item->posts) > 0)
+                        @if ($index == 0)
+                            <div class="col-span-8">
 
-                            <div class=" flex justify-between text-gray-50 bg-blue-800 py-2 px-2">
-                                <p>{{ $item->eng_name }}</p>
-                                <p class="border border-yellow-300 rounded-lg px-2 hover:bg-yellow-300">thap</p>
+                                <div class=" flex justify-between text-gray-50 bg-blue-800 py-2 px-2">
+                                    <p>{{ $item->eng_name }}</p>
+                                    <p class="border border-yellow-300 rounded-lg px-2 hover:bg-yellow-300">thap</p>
 
-                            </div>
-                            <div class="grid grid-cols-3">
-                                @foreach ($item->posts as $value)
-                                    <a href="">
-                                        <div
-                                            class="mx-4 my-1 border border-gray-600 rounded-md overflow-hidden h-[250px] hover:shadow-xl">
+                                </div>
+                                <div class="grid grid-cols-3">
+                                    @foreach ($item->posts as $value)
+                                        <a href="">
+                                            <div
+                                                class="mx-4 my-1 border border-gray-600 rounded-md overflow-hidden h-[250px] hover:shadow-xl">
 
-                                            <img src="{{ asset($value->image) }}" class="h-1/2 w-full object-cover"
-                                                alt="">
+                                                <img src="{{ asset($value->image) }}" class="h-1/2 w-full object-cover"
+                                                    alt="">
 
-                                            <div class="p-2 space-y-4">
-                                                <p class="font-semibold">{{ Str::limit($value->title, 50, '...') }}</p>
-                                                <p>{{ $value->created_at }}</p>
+                                                <div class="p-2 space-y-4">
+                                                    <p class="font-semibold">{{ Str::limit($value->title, 50, '...') }}
+                                                    </p>
+                                                    <p>{{ $value->created_at }}</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                @endforeach
+                                        </a>
+                                    @endforeach
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-span-4">
+                            <div class="col-span-4">
 
-                            <div class="rounded-md h-10 flex  text-center items-center bg-blue-800">
-                                <div class="h-full bg-blue-400 rounded-md">
-                                <a href="">
-                                    <p class="px-2 py-2">New Update</p>
-                                </a>
-                            </div>
-                            <div class="py-2 px-2 text-center hover:border border-white rounded-md">
-                                <a href="" class=" bg-blue-800 ">
-                                    <p class="text-white">Popular</p>
-                                </a>
-                            </div>
-                            </div>
-                            
-                            <div class="bg-blue-400 h-3/4 my-3">
-                                <p>nvjdj</p>
+                                <div class="rounded-md h-10 flex  text-center items-center bg-blue-800">
+                                    <div class="h-full bg-blue-400 rounded-md">
+                                        <a href="">
+                                            <p class="px-2 py-2">New Update</p>
+                                        </a>
+                                    </div>
+                                    <div class="py-2 px-2 text-center hover:border border-white rounded-md">
+                                        <a href="" class=" bg-blue-800 ">
+                                            <p class="text-white">Popular</p>
+                                        </a>
+                                    </div>
+                                </div>
 
+                                <div class="bg-blue-400 h-3/4 my-3">
+                                    <p>nvjdj</p>
+
+                                </div>
                             </div>
-                        </div>
+                        @else
+                            <div class="col-span-12">
+                                <div class=" flex justify-between text-gray-50  bg-blue-800 py-2 px-2">
+                                    <p>{{ $item->eng_name }}</p>
+                                    <p class="border border-yellow-300 rounded-lg px-2 hover:bg-yellow-300">thap</p>
+                                </div>
+                                <div class="grid grid-cols-4">
+                                    @foreach ($item->posts as $value)
+                                        <a href="">
+                                            <div
+                                                class="mx-4 my-1 border border-gray-600 rounded-md overflow-hidden h-[250px] hover:shadow-xl">
 
-                    @else
-                        <div class="col-span-12">
-                            <div class=" flex justify-between text-gray-50  bg-blue-800 py-2 px-2">
-                                <p>{{ $item->eng_name }}</p>
-                                <p class="border border-yellow-300 rounded-lg px-2 hover:bg-yellow-300">thap</p>
-                            </div>
-                            <div class="grid grid-cols-4">
-                                @foreach ($item->posts as $value)
-                                    <a href="">
-                                        <div class="mx-4 my-1 border border-gray-600 rounded-md overflow-hidden h-[250px] hover:shadow-xl">
+                                                <img src="{{ asset($value->image) }}" class="h-1/2 w-full object-cover"
+                                                    alt="">
 
-                                            <img src="{{ asset($value->image) }}" class="h-1/2 w-full object-cover" alt="">
-
-                                            <div class="p-2 space-y-4">
-                                                <p class="font-semibold">{{ Str::limit($value->title, 50, '...') }}</p>
-                                                <p>{{ $value->created_at }}</p>
+                                                <div class="p-2 space-y-4">
+                                                    <p class="font-semibold">{{ Str::limit($value->title, 50, '...') }}
+                                                    </p>
+                                                    <p>{{ $value->created_at }}</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                @endforeach
+                                        </a>
+                                    @endforeach
+                                </div>
                             </div>
-                        </div>
-            @endif
-
+                        @endif
                     @endif
 
-            {{-- <div class="grid grid-cols-3 col-span-8">
+                    {{-- <div class="grid grid-cols-3 col-span-8">
                 @foreach ($item->posts as $value)
                     <a href="">
                         <div
@@ -135,9 +136,9 @@
                     </a>
                 @endforeach
             </div> --}}
-            @endforeach
+                @endforeach
 
-        </div>
+            </div>
         </div>
     </section>
 

@@ -12,11 +12,13 @@
         <p>{{$company->address}}</p>
         <p>{{$company->contact}}</p>
         <p>{{$company->email}}</p>
+        
     </div>
     <div class="px-20 py-8">
-        <form action="" class="flex gap-9">
-        <input type="email" name="email" class="rounded-md h-9 w-72" placeholder="example@gmail.com">
-        <button type="submit" class="bg-red-600 text-white px-3 rounded-lg hover:bg-red-900">subscribe</button>
+        <form action="{{route('substore')}}" method="POST" class="flex gap-4">
+            @csrf
+        <input type="email" name="email" class="rounded-md h-10 w-72" placeholder="example@gmail.com">
+        <button type="submit" class="bg-red-700 p-2 rounded-md text-white hover:bg-red-800">Subscribe</button>
     </form>
     </div>
 </div>

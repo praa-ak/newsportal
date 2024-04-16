@@ -30,8 +30,7 @@
                                                     {{ $value->email }}
                                                 </td>
                                                 <td class="d-flex">
-                                                    <form action="{{ route('category.destroy', $id = $value->id) }}"
-                                                        method="post">
+                                                    <form action="" method="post">
                                                         @csrf
                                                         @method('delete')
                                                         <button type="submit"

@@ -64,7 +64,7 @@
     <link rel="stylesheet" href="/assets/bundles/summernote/summernote-bs4.css">
     <link rel="stylesheet" href="/assets/bundles/jquery-selectric/selectric.css">
 
-    
+
 
 </head>
 

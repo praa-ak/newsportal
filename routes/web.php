@@ -7,10 +7,8 @@ use App\Http\Controllers\Backend\CompanyController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\NewsController;
 use App\Http\Controllers\BaseController;
-use App\Http\Controllers\CategoryPageController;
 use App\Http\Controllers\Frontend\HomepageController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\PostPageController;
+use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,7 +25,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomepageController::class, 'home']);
 Route::post('/subscriber', [BaseController::class, 'subscriber'])->name('substore');
-Route::get('/subindex', [BaseController::class, 'subindex'])->name('subindex');
+Route::get('/category/{slug}', [PageController::class, 'category'])->name('category');
+Route::get('/post/hello', [PageController::class, 'readpost'])->name('readpost');
 Route::get('/dashboard', function () {
     return view('Backend.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -52,6 +51,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/admin/news',NewsController::class)->names('news');
     Route::resource('/admin/category',CategoryController::class)->names('category');
     Route::resource('/admin/advertisement', AdvertisementController::class)->names('advertise');
+    Route::get('/subindex', [BaseController::class, 'subindex'])->name('subindex');
 
 });
 
