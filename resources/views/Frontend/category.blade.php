@@ -10,7 +10,7 @@
                         <div class="col-span-2">
                             <h5 class="font-black">{{ $item->title }}</h5>
                             <div class="py-4 px-2 limited-text">{!! $item->description !!}</div>
-                            <a href=""class="border border-gray-700 bg-red-600 text-white rounded-md px-3 py-1">Read
+                            <a href="{{route('readpost', $id = $item->id)}}"class="border border-gray-700 bg-red-600 text-white rounded-md px-3 py-1">Read
                                 More</a>
                         </div>
                     </div>

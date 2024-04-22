@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomepageController::class, 'home']);
 Route::post('/subscriber', [BaseController::class, 'subscriber'])->name('substore');
 Route::get('/category/{slug}', [PageController::class, 'category'])->name('category');
-Route::get('/post/hello', [PageController::class, 'readpost'])->name('readpost');
+Route::get('/post/{id}', [PageController::class, 'readpost'])->name('readpost');
 Route::get('/dashboard', function () {
     return view('Backend.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

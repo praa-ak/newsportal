@@ -8,7 +8,7 @@
             <marquee behavior="" direction="" onmouseover="this.stop()" onmouseout="this.start()">
                 <div class="flex gap-8">
                     @foreach ($news as $item)
-                        <a href="" class="py-2"><i class="fa fa-bell px-1"></i>{{ $item->title }}</a>
+                        <a href="{{route('readpost', $id = $item->id)}}" class="py-2"><i class="fa fa-bell px-1"></i>{{ $item->title }}</a>
                     @endforeach
                 </div>
             </marquee>
@@ -19,8 +19,8 @@
         @foreach ($news as $index => $item)
             @if ($index < 2)
                 <div
-                    class="container mx-auto w-4/5 h-full bg-gray-50 border border-gray-400 rounded my-4 hover:shadow-lg">
-                    <a href="">
+                    class="container mx-auto w-4/5 h-full bg-gray-50 border border-gray-400 rounded my-4 hover:border-2 hover:shadow-xl">
+                    <a href="{{route('readpost', $id = $item->id)}}">
                         <div class="text-xl font-semibold py-4">
                             <h1>{{ $item->title }}</h1>
                         </div>
@@ -55,9 +55,9 @@
                                 </div>
                                 <div class="grid grid-cols-3">
                                     @foreach ($item->posts as $value)
-                                        <a href="">
+                                        <a href="{{route('readpost', $id = $value->id)}}">
                                             <div
-                                                class="mx-4 my-1 border border-gray-600 rounded-md overflow-hidden h-[250px] hover:shadow-xl">
+                                                class="mx-4 my-1 border border-gray-600 rounded-md overflow-hidden h-[250px] hover:bg-blue-200">
 
                                                 <img src="{{ asset($value->image) }}" class="h-1/2 w-full object-cover"
                                                     alt="">
@@ -100,20 +100,7 @@
                                 </div>
                                 <div class="grid grid-cols-4">
                                     @foreach ($item->posts as $value)
-                                        <a href="">
-                                            <div
-                                                class="mx-4 my-1 border border-gray-600 rounded-md overflow-hidden h-[250px] hover:shadow-xl">
-
-                                                <img src="{{ asset($value->image) }}" class="h-1/2 w-full object-cover"
-                                                    alt="">
-
-                                                <div class="p-2 space-y-4">
-                                                    <p class="font-semibold">{{ Str::limit($value->title, 50, '...') }}
-                                                    </p>
-                                                    <p>{{ $value->created_at }}</p>
-                                                </div>
-                                            </div>
-                                        </a>
+                                       <x-frontend-card :value="$value"/>
                                     @endforeach
                                 </div>
                             </div>

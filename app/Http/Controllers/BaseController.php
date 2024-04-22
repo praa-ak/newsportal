@@ -17,6 +17,7 @@ class BaseController extends Controller
     View::share([
         'category'=>$category,
         'company'=>$company,
+        
     ]);
    }
    #Subscriber Part
