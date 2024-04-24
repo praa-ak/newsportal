@@ -19,3 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/latestnews', [ApiController::class, 'latestnews']);
+Route::get('/categories',[ApiController::class, 'allcategories']);
+Route::get('/company',[ApiController::class, 'company']);
+Route::get('/relatednews/{id}',[ApiController::class, 'related']);
