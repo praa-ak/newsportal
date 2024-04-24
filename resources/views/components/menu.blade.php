@@ -5,7 +5,7 @@
         <div class="flex items-center">
             <ul class="flex items-center  font-medium text-xl ">
                 <li>
-                    <a href="/" class=" h-max w-max py-1 px-2 rounded-sm text-gray-900" >Home Page</a>
+                    <a href="/" class=" h-max w-max py-1 px-2 rounded-sm text-gray-900  hover:bg-blue-800 hover:text-gray-100" >Home Page</a>
                 </li>
                     @foreach ($category as $item)
                     <li>

@@ -20,7 +20,8 @@ class PageController extends BaseController
         $post = Post::where('id', $id)->first();
         $related = Post::whereHas('categories', function ($query) use ($post) {
             $query->whereIn('categories.id', $post->categories->pluck('id'));
-        });
+        })->get();
+        
         return view('Frontend.post', compact('post','related'));
     }
 }

@@ -1,4 +1,4 @@
-@props(["value","news"])
+@props(["value"])
 
 <a href="{{route('readpost', $id = $value->id)}}">
     <div

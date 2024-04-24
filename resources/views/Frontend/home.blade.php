@@ -8,7 +8,8 @@
             <marquee behavior="" direction="" onmouseover="this.stop()" onmouseout="this.start()">
                 <div class="flex gap-8">
                     @foreach ($news as $item)
-                        <a href="{{route('readpost', $id = $item->id)}}" class="py-2"><i class="fa fa-bell px-1"></i>{{ $item->title }}</a>
+                        <a href="{{ route('readpost', $id = $item->id) }}" class="py-2"><i
+                                class="fa fa-bell px-1"></i>{{ $item->title }}</a>
                     @endforeach
                 </div>
             </marquee>
@@ -20,7 +21,7 @@
             @if ($index < 2)
                 <div
                     class="container mx-auto w-4/5 h-full bg-gray-50 border border-gray-400 rounded my-4 hover:border-2 hover:shadow-xl">
-                    <a href="{{route('readpost', $id = $item->id)}}">
+                    <a href="{{ route('readpost', $id = $item->id) }}">
                         <div class="text-xl font-semibold py-4">
                             <h1>{{ $item->title }}</h1>
                         </div>
@@ -55,7 +56,7 @@
                                 </div>
                                 <div class="grid grid-cols-3">
                                     @foreach ($item->posts as $value)
-                                        <a href="{{route('readpost', $id = $value->id)}}">
+                                        <a href="{{ route('readpost', $id = $value->id) }}">
                                             <div
                                                 class="mx-4 my-1 border border-gray-600 rounded-md overflow-hidden h-[250px] hover:bg-blue-200">
 
@@ -87,8 +88,21 @@
                                     </div>
                                 </div>
 
-                                <div class="bg-blue-400 h-3/4 my-3">
-                                    <p>nvjdj</p>
+                                <div class="bg-blue-400 h-auto my-3 text-white">
+                                    @foreach ($news as $index => $item)
+                                        @if ($index < 8)
+                                            <div class="flex gap-3 mx-4 my-3 py-2 text-sm">
+                                                <div> <i class="fa fa-play"></i></div>
+                                                <div>
+                                                    <a href="{{ route('readpost', $id = $item->id) }}">
+                                                        <p class="mb-2">{{ $item->title }}</p>
+
+                                                    </a>
+                                                    <div class="h-0.5 bg-white"></div>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
 
                                 </div>
                             </div>
@@ -100,7 +114,7 @@
                                 </div>
                                 <div class="grid grid-cols-4">
                                     @foreach ($item->posts as $value)
-                                       <x-frontend-card :value="$value"/>
+                                        <x-frontend-card :value="$value" />
                                     @endforeach
                                 </div>
                             </div>
