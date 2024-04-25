@@ -88,17 +88,17 @@
                                     </div>
                                 </div>
 
-                                <div class="bg-blue-400 h-auto my-3 text-white">
+                                <div class="bg-blue-400 h-auto py-3 text-white">
                                     @foreach ($news as $index => $item)
                                         @if ($index < 8)
-                                            <div class="flex gap-3 mx-4 my-3 py-2 text-sm">
+                                            <div class="flex gap-3 mx-4 my-3 py-2 text-sm  border-b">
                                                 <div> <i class="fa fa-play"></i></div>
-                                                <div>
+                                                <div class="hover:text-black">
                                                     <a href="{{ route('readpost', $id = $item->id) }}">
                                                         <p class="mb-2">{{ $item->title }}</p>
 
                                                     </a>
-                                                    <div class="h-0.5 bg-white"></div>
+                                                    {{-- <div class="h-[1px] bg-white"></div> --}}
                                                 </div>
                                             </div>
                                         @endif

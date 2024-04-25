@@ -25,17 +25,17 @@
 
 <body>
     @include('sweetalert::alert')
-    <div>
+    <header>
         <x-topbar />
-        <x-menu />
-    </div>
+    </header>
     <main class="min-h-screen">
+        <x-menu />
         {{ $slot }}
     </main>
 
-    <div>
+    <footer>
         <x-footer />
-    </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
