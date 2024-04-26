@@ -1,9 +1,8 @@
 <x-layout>
-    <div class="bg-blue-800 h-0.5 w-full my-2"></div>
     <section class="py-3">
         <div class="container mx-auto w-4/5 grid grid-cols-12 ">
             <div class="col-span-8 space-y-3">
-            @foreach ($category->posts as $item)
+            @foreach ($posts as $item)
                 <div class=" border border-gray-300 bg-gray-100 rounded-md h-48 overflow-hidden hover:shadow-xl">
                     <div class="grid grid-cols-3 gap-2 ">
                         <img src="{{ asset($item->image) }}" alt="" class="col-span-1 h-48 w-full object-cover ">
@@ -16,6 +15,9 @@
                     </div>
                 </div>
             @endforeach
+            <div>
+                {{$posts->links()}}
+            </div>
         </div>
             <div class="col-span-4 w-full mx-5 space-y-3">
                 <div> <a href=""> <img src="https://khabardharan.codeitapps.com/featured/1689666598.jpg" alt=""> </a> </div>

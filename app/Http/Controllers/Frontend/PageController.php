@@ -13,7 +13,8 @@ class PageController extends BaseController
     public function category($slug)
     {
         $category = Category::where('slug', $slug)->first();
-        return view('Frontend.category', compact('category'));
+        $posts = $category->posts()->paginate(5);
+        return view('Frontend.category', compact('category','posts'));
     }
     public function readpost($id)
     {
@@ -21,7 +22,7 @@ class PageController extends BaseController
         $related = Post::whereHas('categories', function ($query) use ($post) {
             $query->whereIn('categories.id', $post->categories->pluck('id'));
         })->get();
-        
+
         return view('Frontend.post', compact('post','related'));
     }
 }
